@@ -8,5 +8,12 @@
     <artifactId>code-study</artifactId>
     <version>1.0.0</version>
 
-
+    <dependencies>
+        <!--  tools -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
+        </dependency>
+    </dependencies>
 </project>

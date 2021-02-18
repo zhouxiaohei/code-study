@@ -42,7 +42,7 @@ public class Test {
         if (root.right != null && root.val + 1 == root.right.val) {
             subtreeLongest = Math.max(subtreeLongest, right + 1);
         }
-
+        
         if (subtreeLongest > longest) {
             longest = subtreeLongest;
         }

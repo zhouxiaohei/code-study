@@ -11,7 +11,7 @@ import java.util.HashMap;
  **/
 public class BusinesCode {
 
-    //TODO leetcode 第八题 旋转字符串
+    //TODO leetcode 第八题 旋转字符串    分为两部分分别处理
     public static void testChangeStr(){
         String str = "abcdefg";
         int offset = 3;
@@ -46,7 +46,7 @@ public class BusinesCode {
     }
 
 
-    //TODO leetcode 第82题
+    //TODO leetcode 第82题   使用异或
     public static void testprintlnOnly(){
         int[] ints = {1, 1, 2, 3, 3, 4, 4, 5, 2};
         System.out.println(printlnOnly(ints));
@@ -81,7 +81,7 @@ public class BusinesCode {
     }
 
     //https://zhuanlan.zhihu.com/p/121064958
-    //TODO 两数之和 第55题  使用hash
+    //TODO 两数之和  给一个整数数组，找到两个数使得他们的和等于一个给定的数 target 第55题  使用hash
     public int[] twoSum(int[] numbers, int target) {
         HashMap<Integer,Integer> map = new HashMap<>();
 
