@@ -4,6 +4,8 @@ package com.zhou.demo.leetcode;
  * @ClassName MedianSortedArrays
  * @Author JackZhou
  * @Date 2021/1/19  12:39
+ * https://leetcode-cn.com/problems/median-of-two-sorted-arrays/
+ *  寻找两个正序数组的中位数   时间复杂度为 O(log (m+n))
  **/
 public class MedianSortedArrays {
 
@@ -55,12 +57,6 @@ public class MedianSortedArrays {
             }
         }
 
-//        // 只有一个
-//        if(oneMedian == 0){
-//            if(flag){
-//
-//            }
-//        }
         return 0;
     }
 }

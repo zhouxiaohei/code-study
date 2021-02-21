@@ -1,4 +1,4 @@
-package com.zhou.demo;
+package com.zhou.demo.reference;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -35,6 +35,7 @@ public class StepQuestion {
         return stepWays(n-1) + stepWays(n-2);
     }
 
+    // 递归，但是记录   不重复计算、需要额外空间
     public static int stepWaysOptimize(int n){
         if(n == 1 || n == 2){
             return n;

@@ -45,7 +45,6 @@ public class BusinesCode {
         }
     }
 
-
     //TODO leetcode 第82题   使用异或
     public static void testprintlnOnly(){
         int[] ints = {1, 1, 2, 3, 3, 4, 4, 5, 2};
@@ -95,12 +94,35 @@ public class BusinesCode {
         return null;
     }
 
+    // TODO 上一题的第二种解法  使用指针
+    public int[] twoSum2(int[] numbers, int target) {
+        if(numbers == null || numbers.length == 0){
+            return null;
+        }
+        int left = 0;
+        int right = numbers.length -1;
+        int sum = numbers[left] + numbers[right];
+
+        while(sum != target){
+            if(left >= right){
+                return null;
+            }
+            if(sum > target){
+                right--;
+            }else if(sum < target){
+                left++;
+            }
+            sum = numbers[left] + numbers[right];
+        }
+        return new int[]{left +1 , right+1};
+
+    }
+
 
     public static void main(String[] args) {
         //testChangeStr();
         //testprintlnOnly();
        // System.out.println( aplusb(-5, 3));
-
     }
 }
 
