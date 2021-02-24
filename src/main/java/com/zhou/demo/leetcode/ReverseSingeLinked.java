@@ -24,7 +24,7 @@ public class ReverseSingeLinked {
         //System.out.println(rever(node));
 
         // leetcode  92
-        testReverseBetween(node, 2, 5);
+        testReverseBetween(node, 1, 5);
 
     }
 
@@ -124,20 +124,13 @@ class Node {
         this.value = value;
     }
 
-    public void add(Integer value) {
-        if (value == null) {
-            this.value = value;
-        } else {
-            if (next == null) {
-                next = new Node(value);
-            } else {
-                Node nextNode = next;
-                while (nextNode.next != null) {
-                    nextNode = nextNode.next;
-                }
-                nextNode.next = new Node(value);
-            }
-
+    // 新增直接添加到节点最后
+    public void add(int value){
+        Node current = this;
+        while(current.next != null){
+            current = current.next;
         }
+        current.setNext(new Node(value));
     }
 }
+
