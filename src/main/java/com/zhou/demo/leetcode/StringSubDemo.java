@@ -12,7 +12,6 @@ import java.util.List;
 public class StringSubDemo {
 
     public static void main(String[] args) {
-
         lengthOfLongestSubstring("abcadabc");
     }
 

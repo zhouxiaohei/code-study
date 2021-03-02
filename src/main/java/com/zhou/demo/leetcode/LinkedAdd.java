@@ -33,6 +33,44 @@ public class LinkedAdd {
         System.out.println(node.toString());
     }
 
+    public ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
+        int mid = 0;
+        ListNode left = l1;
+        ListNode right = l2;
+        ListNode result = null;
+        ListNode currentNode = null;
+        while (left != null || right != null) {
+            int sum = (left == null ? 0 : left.val) + (right == null ? 0 : right.val) + mid;
+            if (sum >= 10) {
+                mid = 1;
+                sum = sum - 10;
+            }else{
+                mid = 0;
+            }
+
+            if (result == null) {
+                result = new ListNode(sum);
+                currentNode = result;
+            } else {
+                ListNode node = new ListNode(sum);
+                currentNode.next = node;
+                currentNode = node;
+            }
+            if(left != null){
+                left = left.next;
+            }
+
+            if(right != null){
+                right = right.next;
+            }
+        }
+        if(mid > 0){
+            currentNode.next = new ListNode(mid);
+        }
+
+        return result;
+    }
+
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode pre = new ListNode(0);
         ListNode cur = pre;
